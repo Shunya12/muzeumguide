@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+body {
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ヘッダーの検索・ログイン・ログアウト・タイトル部分 */
+
+.page-header {
+    background-color: #eee;
+}
+
+.header-title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.header-navi {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ミュージアムカテゴリー */
+.category-navi {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 30px;
+}
+
+.category-navi li {
+    margin-left: 30px;
+}
+
+/* メインコンテンツ */
+.contents {
+    background-color: green;
+}
+
+
+/* フッター */
+footer .wrapper {
+    text-align: center;
+    background-color: red;
+    padding: 20px 0;
+}
