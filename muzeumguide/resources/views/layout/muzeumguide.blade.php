@@ -2,10 +2,10 @@
 <html lang="ja" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="岡山県の美術館・博物館を紹介しているサイトです。">
+        <meta name="description" content="@yield('description')">
         <title>@yield('title')</title>
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body>
         <div class="whole-wrapper">
@@ -21,10 +21,10 @@
                 <nav>
                     <ul class="category-navi">
                         <li><a class="category home" href="/muzeumguide">ホーム</a></li>
-                        <li><a class="category art" href="/#">美術</a></li>
-                        <li><a class="category history" href="/#">歴史</a></li>
-                        <li><a class="category nature" href="/#">自然</a></li>
-                        <li><a class="category sience" href="/#">科学</a></li>
+                        <li><a class="category m-art" href="/#">美術</a></li>
+                        <li><a class="category m-history" href="/#">歴史</a></li>
+                        <li><a class="category m-nature" href="/#">自然</a></li>
+                        <li><a class="category m-science" href="/#">科学</a></li>
                     </ul>
                 </nav>
             </header>

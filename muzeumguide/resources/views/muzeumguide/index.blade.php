@@ -2,19 +2,15 @@
 
 @section('title', '岡山県のミュージアムガイド')
 
+@section('description', '岡山県の美術館・博物館を紹介しているサイトです。')
+
 @section('contents')
     <div class="contents">
-        <div class="art">
-          <a href="#">美術</a>
+        @foreach($categories as $category)
+        <div class="category {{$category->name_en}}">
+          <a href="#">{{$category->name}}</a>
+          <p>{{$category->description}}</p>
         </div>
-        <div class="art">
-          <a href="#">歴史</a>
-        </div>
-        <div class="art">
-          <a href="#">自然</a>
-        </div>
-        <div class="art">
-          <a href="#">科学</a>
-        </div>
+        @endforeach
     </div>
 @endsection
