@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('muzeumguide', 'MuzeumguideController@index');
+
+Route::get('/', 'MuzeumguideController@index');
