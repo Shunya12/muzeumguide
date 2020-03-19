@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->truncate();
+
 
         DB::table('categories')->insert([
             'name' => '美術',
