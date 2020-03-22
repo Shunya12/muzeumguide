@@ -20,11 +20,11 @@
                 <h1 class="header-title">岡山県のミュージアムガイド</h1>
                 <nav>
                     <ul class="category-navi">
-                        <li><a class="category home" href="/muzeumguide">ホーム</a></li>
-                        <li><a class="category m-art" href="/#">美術</a></li>
-                        <li><a class="category m-history" href="/#">歴史</a></li>
-                        <li><a class="category m-nature" href="/#">自然</a></li>
-                        <li><a class="category m-science" href="/#">科学</a></li>
+                        <li><a class="category home" href="/">ホーム</a></li>
+                        <li><a class="category m-art" href="muzeumguide/art">美術</a></li>
+                        <li><a class="category m-history" href="muzeumguide/history">歴史</a></li>
+                        <li><a class="category m-nature" href="muzeumguide/nature">自然</a></li>
+                        <li><a class="category m-science" href="muzeumguide/science">科学</a></li>
                     </ul>
                 </nav>
             </header>

@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', 'MuzeumguideController@index');
+Route::get('/', 'MuzeumguideController@index');  //トップページ
+
+Route::get('muzeumguide/art', 'MuzeumguideController@category_art');         //各カテゴリーページ
+Route::get('muzeumguide/history', 'MuzeumguideController@category_history');
+Route::get('muzeumguide/nature', 'MuzeumguideController@category_nature');
+Route::get('muzeumguide/science', 'MuzeumguideController@category_science');
