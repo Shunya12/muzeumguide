@@ -18,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'MuzeumguideController@index')->name('top');  //トップページ
 
 Route::get('muzeum/{category}', 'MuzeumguideController@showCategory')->name('show.category');         //各カテゴリーページ
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
