@@ -20,11 +20,10 @@
                 <h1 class="header-title">岡山県のミュージアムガイド</h1>
                 <nav>
                     <ul class="category-navi">
-                        <li><a class="category home" href="/">ホーム</a></li>
-                        <li><a class="category m-art" href="muzeumguide/art">美術</a></li>
-                        <li><a class="category m-history" href="muzeumguide/history">歴史</a></li>
-                        <li><a class="category m-nature" href="muzeumguide/nature">自然</a></li>
-                        <li><a class="category m-science" href="muzeumguide/science">科学</a></li>
+                        <li><a class="category home" href="{{ route('top') }}">ホーム</a></li>
+                        @foreach ($categories as $category)
+                            <li><a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">{{ $category->name }}</a></li>
+                        @endforeach
                     </ul>
                 </nav>
             </header>

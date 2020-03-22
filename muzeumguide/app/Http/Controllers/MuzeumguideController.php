@@ -16,30 +16,17 @@ class MuzeumguideController extends Controller
         $this->category = $category;
     }
 
-    public function index(Request $request)
+    public function index()
     {
         // $categories = $this->category->all();
         $categories = DB::select('select * from categories');
         return view('muzeumguide.index', ['categories' => $categories]);
     }
 
-    public function category_art(Request $request)
+    public function showCategory($category)
     {
-        return view('muzeumguide.category_art');
-    }
-
-    public function category_history(Request $request)
-    {
-        return view('muzeumguide.category_history');
-    }
-
-    public function category_nature(Request $request)
-    {
-        return view('muzeumguide.category_nature');
-    }
-
-    public function category_science(Request $request)
-    {
-        return view('muzeumguide.category_science');
+        $viewName = 'muzeumguide.category_' . $category;
+        $categories = DB::select('select * from categories');
+        return view($viewName, ['categories' => $categories]);
     }
 }
