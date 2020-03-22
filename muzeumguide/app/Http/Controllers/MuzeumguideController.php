@@ -11,22 +11,20 @@ class MuzeumguideController extends Controller
 
     private $category;
 
-    public function __construct(Category $category)
+    public function __construct(Category $category)//クラスインスタンス化渡す、モデルのクラス　woプロパティに代入
     {
         $this->category = $category;
     }
 
     public function index()
     {
-        // $categories = $this->category->all();
-        $categories = DB::select('select * from categories');
+        $categories = $this->category->all();
         return view('muzeumguide.index', ['categories' => $categories]);
     }
 
     public function showCategory($category)
     {
-        $viewName = 'muzeumguide.category_' . $category;
-        $categories = DB::select('select * from categories');
-        return view($viewName, ['categories' => $categories]);
+        $categories = $this->category->all();
+        return view('muzeumguide.category', ['categories' => $categories]);
     }
 }
