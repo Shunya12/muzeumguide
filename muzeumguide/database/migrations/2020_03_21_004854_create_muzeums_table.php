@@ -15,6 +15,7 @@ class CreateMuzeumsTable extends Migration
     {
         Schema::create('muzeums', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id');
             $table->string('name');
             $table->string('address');
             $table->string('tel');
