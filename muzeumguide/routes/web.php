@@ -22,3 +22,5 @@ Route::get('muzeum/{category}', 'MuzeumguideController@showCategory')->name('sho
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/contact', 'MuzeumguideController@contact');

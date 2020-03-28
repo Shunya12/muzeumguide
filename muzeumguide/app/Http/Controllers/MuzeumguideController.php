@@ -27,4 +27,8 @@ class MuzeumguideController extends Controller
         $categories = $this->category->all();
         return view('muzeumguide.category', ['categories' => $categories]);
     }
+
+    public function contact() {
+        return view('muzeumguide.contact');
+    }
 }
