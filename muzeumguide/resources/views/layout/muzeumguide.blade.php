@@ -13,7 +13,7 @@
                 <div class="header-navi">
                     <input class="search" type="search" name="" value="検索" maxlength="20">
                     <div class="login-logout">
-                        <a href="#">ログイン</a>
+                        <a href="{{ route('login') }}">ログイン</a>
                         <a href="#">ログアウト</a>
                     </div>
                 </div>
