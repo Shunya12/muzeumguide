@@ -34,6 +34,15 @@
                 </div>
             </main>
 
+            <div class="under-navi">
+                <ul class="nav justify-content-center">
+                    <li><a class="category home" href="{{ route('top') }}">ホーム</a></li>
+                    @foreach ($categories as $category)
+                        <li><a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">{{ $category->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+
             <footer>
                 <div class="wrapper">
                     <p><small>&copy; 2020 muzeum Guide Of Okayama Prefecture.</p>
