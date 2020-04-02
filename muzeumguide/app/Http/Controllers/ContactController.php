@@ -7,12 +7,15 @@ use App\Category;
 
 class ContactController extends Controller
 {
-    private __construct()
+
+    private $category;
+
+    public function __construct(Category $category) //コンストラクタは基本パブリック
     {
         $this->category = $category;
     }
 
-    public function contact(Category $category) {
+    public function contact() {
         $categories = $this->category->all();
         return view('contact.contact', ['categories' => $categories]);
     }
@@ -26,12 +29,12 @@ class ContactController extends Controller
     public function confirm ()
     {
         $categories = $this->category->all();
-
+        return view('contact.confirm', ['categories' => $categories]);
     }
 
     public function showThanks ()
     {
         $categories = $this->category->all();
-        return
+        return view('contact.thanks', ['categories' => $categories]);
     }
 }

@@ -41,5 +41,12 @@ class CategoriesTableSeeder extends Seeder
             'name_en' => 'science',
             'url' => 'muzeumguide/science',
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'お問い合わせ',
+            'description' => '何かご要望がございましたら、お気軽にお問い合わせください。',
+            'name_en' => 'contact',
+            'url' => 'muzeumguide/contact',
+        ]);
     }
 }
