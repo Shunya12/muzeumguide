@@ -18,6 +18,7 @@
                     </div>
                 </div>
                 <h1 class="header-title">岡山県のミュージアムガイド</h1>
+
                 <nav>
                     <ul class="category-navi">
                         <li><a class="category home" href="{{ route('top') }}">ホーム</a></li>
@@ -45,7 +46,7 @@
 
             <footer>
                 <div class="wrapper">
-                    <p><small>&copy; 2020 muzeum Guide Of Okayama Prefecture.</p>
+                    <p><small>&copy; 2020 Muzeum Guide Of Okayama Prefecture.</p>
                 </div>
             </footer>
         </div>
