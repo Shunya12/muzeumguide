@@ -11,6 +11,6 @@ class MuzeumsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\\Muzeum::class, 100)->create();
+        factory(App\Muzeum::class, 10)->create();
     }
 }

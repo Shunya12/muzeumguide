@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Muzeum;
 use Illuminate\Support\Facades\DB;
 
 class MuzeumguideController extends Controller
 {
 
     private $category;
+    private $muzeum;
 
-    public function __construct(Category $category)//クラスインスタンス化渡す、モデルのクラス　woプロパティに代入
+    public function __construct(Category $category, Muzeum $muzeum)//クラスインスタンス化渡す、モデルのクラス　woプロパティに代入
     {
         $this->category = $category;
+        $this->muzeum = $muzeum;
     }
 
     public function index()
@@ -24,9 +27,16 @@ class MuzeumguideController extends Controller
 
     public function showCategory($category)
     {
+        $category_id = $this->category->getIdByNameEn($category);
+        $muzeums = $this->muzeum->getByCategoryId($category_id);
         $categories = $this->category->all();
-        return view('muzeumguide.category', ['categories' => $categories]);
+
+        $data = [
+            'categories' => $categories,
+            'muzeums' => $muzeums,
+        ];
+        return view('muzeumguide.category', $data);
     }
 
-    
+
 }

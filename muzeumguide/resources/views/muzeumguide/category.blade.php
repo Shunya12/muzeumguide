@@ -4,6 +4,10 @@
 
 @section('description', '岡山県の美術館・博物館を紹介しているサイトです。')
 
-@section('content')
-
+@section('contents')
+    <ul>
+        @foreach ($muzeums as $muzeum)
+            <li>{{ $muzeum->name }}</li>
+        @endforeach
+    </ul>
 @endsection
