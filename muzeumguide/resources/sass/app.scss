@@ -51,6 +51,11 @@ a {
 /* メインコンテンツ */
 .contents {
     background-color: green;
+    height: 500px;
+    text-align: center;
+    .category {
+        background-color: pink;
+    }
 }
 
 

@@ -97,7 +97,7 @@ h6 {
 
 p {
   margin-top: 0;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
 }
 
 abbr[title],
@@ -121,7 +121,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
 }
 
 ol ol,
@@ -7502,7 +7502,7 @@ button.bg-dark:focus {
 }
 
 .justify-content-center {
-  justify-content: space-around;
+  justify-content: center !important;
 }
 
 .justify-content-between {
@@ -10930,6 +10930,12 @@ a {
 
 .contents {
   background-color: green;
+  height: 500px;
+  text-align: center;
+}
+
+.contents .category {
+  background-color: pink;
 }
 
 /* フッター */
@@ -10939,3 +10945,4 @@ footer .wrapper {
   background-color: red;
   padding: 20px 0;
 }
+
