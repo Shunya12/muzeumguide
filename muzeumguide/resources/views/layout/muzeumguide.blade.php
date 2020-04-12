@@ -36,7 +36,7 @@
             </main>
 
             <div class="under-navi">
-                <ul class="nav justify-content-center">
+                <ul class="under-nav-content">
                     <li><a class="category home" href="{{ route('top') }}">ホーム</a></li>
                     @foreach ($categories as $category)
                         <li><a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">{{ $category->name }}</a></li>

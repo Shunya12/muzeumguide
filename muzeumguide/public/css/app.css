@@ -10919,6 +10919,7 @@ a {
   justify-content: space-around;
   list-style: none;
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 .category-navi li {
@@ -10936,6 +10937,7 @@ a {
 
 .contents .category {
   background-color: pink;
+  margin-top: 20px;
 }
 
 /* フッター */
@@ -10944,5 +10946,13 @@ footer .wrapper {
   text-align: center;
   background-color: red;
   padding: 20px 0;
+}
+
+.under-nav {
+  display: flex;
+}
+
+.under-nav .under-nav-content {
+  margin-left: 20px;
 }
 
