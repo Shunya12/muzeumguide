@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Http\Request\ContactRequest;
 
 class ContactController extends Controller
 {
@@ -15,22 +16,23 @@ class ContactController extends Controller
         $this->category = $category;
     }
 
-    public function contact() {
+    public function contact()    //お問い合わせページ表示
+    {
         $categories = $this->category->all();
         return view('contact.contact', ['categories' => $categories]);
     }
 
-    public function store (Request $request)
+    public function confirm (ContactRequest $request)    //確認ページ表示
     {
-        //DB保存処理
-        return redirect()->route('contact.thanks');
+        return view('contact.confirm', ['confirm_message' => '入力内容は以下でよろしいでしょうか？よろしければ送信してください。']);
     }
 
-    public function confirm ()
-    {
-        $categories = $this->category->all();
-        return view('contact.confirm', ['categories' => $categories]);
-    }
+    // public function store (Request $request)
+    // {
+    //     //DB保存処理
+    //     return redirect()->route('contact.thanks');
+    // }
+
 
     public function showThanks ()
     {
