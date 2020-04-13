@@ -27,3 +27,5 @@ Route::get('contact', 'ContactController@contact')->name('contact.show');
 Route::post('contact', 'ContactController@store')->name('contact.store');//お問い合わせデータベースに保存
 Route::post('confirm', 'ContactController@confirm')->name('contact.confirm');//確認画面表示
 Route::get('contact/thanks', 'ContactController@ShowThanks')->name('contact.thanks');//お問い合わせありがとうございます表示
+
+Route::get('muzeum/{category}/{id}', 'MuzeumguideController@showMuzeum')->name('show.muzeum'); //詳細ページ
