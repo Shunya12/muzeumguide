@@ -10931,13 +10931,12 @@ a {
 
 .contents {
   background-color: green;
-  height: 500px;
   text-align: center;
+  min-height: 500px;
 }
 
 .contents .category {
   background-color: pink;
-  margin-top: 20px;
 }
 
 /* フッター */
