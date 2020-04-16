@@ -5,15 +5,6 @@
 @section('description', '何かご要望がございましたら、お気軽にお問い合わせください。')
 
 @section('contents')
-
-@if (count($errors) > 0)
-    <ul>
-        @foreach ($errors as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-@endif
-
     <div class="container">
         <h2 class="contact-title">お問い合わせ</h2>
         {{ Form::open(['route' => 'contact.confirm', 'method' => 'POST']) }}

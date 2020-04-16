@@ -3,14 +3,6 @@
 @section('title', '確認ページ')
 
 @section('contents')
-@if (count($errors) > 0)
-    <ul>
-        @foreach ($errors as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-@endif
-
     <div class="wrapper">
         <div class="container">
             <h2 class="confirm-title">お問い合わせ内容の確認</h2>
