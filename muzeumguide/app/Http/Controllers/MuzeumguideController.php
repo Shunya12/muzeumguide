@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Muzeum;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class MuzeumguideController extends Controller
 {
