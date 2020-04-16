@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
-use App\Http\Request\ContactRequest;
+use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
 
     private $category;
 
-    public function __construct(Category $category) //コンストラクタは基本パブリック
+    public function __construct(Category $category) //コンストラクタはパブリック
     {
         $this->category = $category;
     }
@@ -22,9 +22,23 @@ class ContactController extends Controller
         return view('contact.contact', ['categories' => $categories]);
     }
 
-    public function confirm (ContactRequest $request)    //確認ページ表示
+    public function confirm (Request $request)    //確認ページ表示
     {
-        return view('contact.confirm', ['confirm_message' => '入力内容は以下でよろしいでしょうか？よろしければ送信してください。']);
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'email' => 'required|string|max:200',
+            'message' => 'required|string|max:500',
+        ]);
+
+        $inputs = $request->all();
+
+        return view('contact.confirm', ['confirm_message' => '以下の内容でよろしければ、送信ボタンを押してください。', 'inputs' => $inputs]);
+    }
+
+    public function showThanks () //送信ページ
+    {
+        $categories = $this->category->all();
+        return view('contact.thanks', ['categories' => $categories]);
     }
 
     // public function store (Request $request)
@@ -32,11 +46,4 @@ class ContactController extends Controller
     //     //DB保存処理
     //     return redirect()->route('contact.thanks');
     // }
-
-
-    public function showThanks ()
-    {
-        $categories = $this->category->all();
-        return view('contact.thanks', ['categories' => $categories]);
-    }
 }
