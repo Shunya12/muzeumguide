@@ -14,7 +14,7 @@
                     <input class="search" type="search" name="" value="検索" maxlength="20">
                     <div class="login-logout">
                         <a href="{{ route('login') }}">ログイン</a>
-                        <a href="#">ログアウト</a>
+                        <a href="{{ route('register') }}">登録</a>
                     </div>
                 </div>
                 <h1 class="header-title">岡山県のミュージアムガイド</h1>
