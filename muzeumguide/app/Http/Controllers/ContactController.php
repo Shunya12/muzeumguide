@@ -22,12 +22,12 @@ class ContactController extends Controller
         return view('contact.contact', ['categories' => $categories]);
     }
 
-    public function confirm (ContactRequest $request)    //確認ページ表示
+    public function confirm (ContactRequest $request)    //確認・送信ページ表示
     {
         return view('contact.confirm', ['confirm_message' => '入力内容は以下でよろしいでしょうか？よろしければ送信ボタンを押してください。']);
     }
 
-    public function showThanks () //送信ページ
+    public function showThanks () //お問い合わせありがとうございますを表示
     {
         $categories = $this->category->all();
         return view('contact.thanks', ['categories' => $categories]);
