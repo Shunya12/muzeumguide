@@ -25,6 +25,7 @@
                         @foreach ($categories as $category)
                             <li><a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">{{ $category->name }}</a></li>
                         @endforeach
+                        <li><a href="{{ route('contact.show') }}">お問い合わせ</a></li>
                     </ul>
                 </nav>
             </header>
@@ -41,6 +42,7 @@
                     @foreach ($categories as $category)
                         <li><a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">{{ $category->name }}</a></li>
                     @endforeach
+                    <li><a href="{{ route('contact.show') }}">お問い合わせ</a></li>
                 </ul>
             </div>
 
