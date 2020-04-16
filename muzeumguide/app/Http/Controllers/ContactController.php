@@ -22,17 +22,9 @@ class ContactController extends Controller
         return view('contact.contact', ['categories' => $categories]);
     }
 
-    public function confirm (Request $request)    //確認ページ表示
+    public function confirm (ContactRequest $request)    //確認ページ表示
     {
-        $request->validate([
-            'name' => 'required|string|max:100',
-            'email' => 'required|string|max:200',
-            'message' => 'required|string|max:500',
-        ]);
-
-        $inputs = $request->all();
-
-        return view('contact.confirm', ['confirm_message' => '以下の内容でよろしければ、送信ボタンを押してください。', 'inputs' => $inputs]);
+        return view('contact.confirm', ['confirm_message' => '入力内容は以下でよろしいでしょうか？よろしければ送信ボタンを押してください。']);
     }
 
     public function showThanks () //送信ページ
