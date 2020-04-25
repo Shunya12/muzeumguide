@@ -1,4 +1,4 @@
-@extends('layout.muzeumguide')
+@extends('layouts.app')
 
 @section('title', '岡山県のミュージアムガイド/' . $category_name )
 

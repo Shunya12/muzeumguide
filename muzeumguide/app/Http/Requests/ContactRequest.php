@@ -13,12 +13,7 @@ class ContactRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == 'contact')
-        {
-            return ture;
-        } else {
-            return false;
-        }
+        return true;
     }
 
     /**
@@ -31,19 +26,17 @@ class ContactRequest extends FormRequest
         return [
             'name' => 'required|max:200',
             'email' => 'email|max:200',
-            'message' => 'required|max500',
+            'message' => 'required|max:500',
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => '名前は必ず入力してください。',
-            'name.max' => '200文字以内で入力してください。',
-            'email.email' => 'メールアドレスを入力してください。',
-            'email.max' => '200文字以内で入力してください。',
+            'name.required'    => '名前は必ず入力してください。',
+            'email.email'      => 'メールアドレスを入力してください。',
             'message.required' => 'メッセージは必ず入力してください。',
-            'message.max' => '500文字以内で入力してください。',
+            'max'              => ':max文字以内で入力してください。'
         ];
     }
 }

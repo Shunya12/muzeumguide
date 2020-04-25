@@ -10907,14 +10907,25 @@ a {
   text-align: center;
 }
 
-.header-navi {
+.login-logout {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.login-logout .login {
+  display: block;
+  margin: 10px 10px 0 0;
+}
+
+.login-logout .register {
+  display: block;
+  margin: 10px 20px 0 0;
 }
 
 /* ミュージアムカテゴリー */
 
 .category-navi {
+  background: white;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -10923,8 +10934,42 @@ a {
 }
 
 .category-navi li {
-  margin-left: 30px;
-  font-size: 38px;
+  display: table-cell;
+  width: 16.66666666%;
+  padding: 0.5em 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  vertical-align: middle;
+}
+
+.category-navi li .category {
+  display: block;
+  padding: 0.5em 10px;
+  text-align: center;
+  white-space: nowrap;
+  border-right: 1px solid #eee;
+}
+
+.category-navi li .a-contact {
+  display: block;
+  padding: 0.5em 10px;
+  text-align: center;
+  white-space: nowrap;
+  background-color: pink;
+  border: 1px #ddd solid;
+  border-radius: 20%;
+}
+
+.category-navi li span {
+  display: block;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #ddd;
+}
+
+.category-navi .li-contact {
+  margin: 0 20px;
 }
 
 /* メインコンテンツ */
@@ -10945,13 +10990,5 @@ footer .wrapper {
   text-align: center;
   background-color: red;
   padding: 20px 0;
-}
-
-.under-nav {
-  display: flex;
-}
-
-.under-nav .under-nav-content {
-  margin-left: 20px;
 }
 

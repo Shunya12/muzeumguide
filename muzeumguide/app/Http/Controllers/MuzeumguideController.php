@@ -22,18 +22,15 @@ class MuzeumguideController extends Controller
 
     public function index()
     {
-        $categories = $this->category->all();
-        return view('muzeumguide.index', ['categories' => $categories]);
+        return view('muzeumguide.index');
     }
 
     public function showCategory($category_name)
     {
         $category = $this->category->getByNameEn($category_name);
         $muzeums = $this->muzeum->getByCategoryId($category->id);
-        $categories = $this->category->all();
 
         $data = [
-            'categories' => $categories,
             'muzeums' => $muzeums,
             'category_name' => $category->name
         ];
@@ -42,10 +39,8 @@ class MuzeumguideController extends Controller
 
     public function showMuzeum($category, $muzeum_id)
     {
-        $categories = $this->category->all();
         $muzeum = $this->muzeum->find($muzeum_id);
-        $data = [
-            'categories' => $categories, //キーを変数として使う
+        $data = [ //キーを変数として使う
             'muzeum' => $muzeum
         ];
         return view('muzeumguide.muzeum', $data );

@@ -1,4 +1,4 @@
-@extends('layout.muzeumguide')
+@extends('layouts.app')
 
 @section('contents')
 <div class="container">

@@ -11,21 +11,34 @@
         <div class="whole-wrapper">
             <header class="page-header wrapper">
                 <div class="header-navi">
-                    <input class="search" type="search" name="" value="検索" maxlength="20">
                     <div class="login-logout">
-                        <a href="{{ route('login') }}">ログイン</a>
-                        <a href="{{ route('register') }}">登録</a>
+                        <a class="login" href="{{ route('login') }}">ログイン</a>
+                        <a class="register" href="{{ route('register') }}">登録</a>
                     </div>
                 </div>
                 <h1 class="header-title">岡山県のミュージアムガイド</h1>
 
                 <nav>
                     <ul class="category-navi">
-                        <li><a class="category home" href="{{ route('top') }}">ホーム</a></li>
+                        <li><a class="category home" href="{{ route('top') }}">
+                            ホーム
+                            <span>home</span>
+                            </a>
+                        </li>
                         @foreach ($categories as $category)
-                            <li><a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">{{ $category->name }}</a></li>
+                            <li>
+                                <a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">
+                                {{ $category->name }}
+                                <span>{{ $category->name_en }}</span>
+                                </a>
+                            </li>
                         @endforeach
-                        <li><a href="{{ route('contact.show') }}">お問い合わせ</a></li>
+                        <li class="li-contact">
+                            <a class="a-contact" href="{{ route('contact.show') }}">
+                                お問い合わせ
+                                <span>contact</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -36,17 +49,30 @@
                 </div>
             </main>
 
-            <div class="under-navi">
-                <ul class="under-nav-content">
-                    <li><a class="category home" href="{{ route('top') }}">ホーム</a></li>
-                    @foreach ($categories as $category)
-                        <li><a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">{{ $category->name }}</a></li>
-                    @endforeach
-                    <li><a href="{{ route('contact.show') }}">お問い合わせ</a></li>
-                </ul>
-            </div>
-
             <footer>
+                <div class="category-navi">
+                    <ul class="category-navi">
+                        <li><a class="category home" href="{{ route('top') }}">
+                            ホーム
+                            <span>home</span>
+                            </a>
+                        </li>
+                        @foreach ($categories as $category)
+                            <li>
+                                <a class="category m-art" href="{{ route('show.category', ['category' => $category->name_en]) }}">
+                                    {{ $category->name }}
+                                    <span>{{ $category->name_en }}</span>
+                                </a>
+                            </li>
+                        @endforeach
+                        <li class="li-contact">
+                            <a class="a-contact" href="{{ route('contact.show') }}">
+                            お問い合わせ
+                            <span>contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="wrapper">
                     <p><small>&copy; 2020 Muzeum Guide Of Okayama Prefecture.</p>
                 </div>

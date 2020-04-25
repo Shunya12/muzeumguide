@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Http\ViewComposer as V;
+use App\Http\ViewComposers as V;
 
 class ViewComposerProvider extends ServiceProvider
 {
@@ -14,10 +14,7 @@ class ViewComposerProvider extends ServiceProvider
      */
     public function register()
     {
-        \View::composers([
-            V\NavigationComposer::class => 'layouts.muzeumguide',
 
-        ]);
     }
 
     /**
@@ -27,6 +24,9 @@ class ViewComposerProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \View::composers([
+            V\NavigationComposer::class => ['layouts.app', 'muzeumguide.index'],
+
+        ]);
     }
 }

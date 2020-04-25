@@ -1,4 +1,4 @@
-@extends('layout.muzeumguide')
+@extends('layouts.app')
 
 @section('title', '確認ページ')
 
