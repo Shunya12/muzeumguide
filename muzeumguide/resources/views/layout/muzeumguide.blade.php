@@ -74,7 +74,7 @@
                     </ul>
                 </div>
                 <div class="wrapper">
-                    <img src={{ 'img/footer.jpg' }}<p><small>&copy; 2020 Muzeum Guide Of Okayama Prefecture.</p>
+                    <p><small>&copy; 2020 Muzeum Guide Of Okayama Prefecture.</p>
                 </div>
             </footer>
         </div>
