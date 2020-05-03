@@ -26,7 +26,6 @@ class ViewComposerProvider extends ServiceProvider
     {
         \View::composers([
             V\NavigationComposer::class => ['layouts.app', 'muzeumguide.index'],
-
         ]);
     }
 }
