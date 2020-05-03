@@ -10975,13 +10975,11 @@ a {
 /* メインコンテンツ */
 
 .contents {
-  background-color: green;
   text-align: center;
-  min-height: 500px;
 }
 
-.contents .category {
-  background-color: pink;
+.contents.wrapper {
+  margin: 20px 0;
 }
 
 /* フッター */

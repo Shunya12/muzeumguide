@@ -90,12 +90,9 @@ a {
 
 /* メインコンテンツ */
 .contents {
-    background-color: green;
     text-align: center;
-    min-height: 500px;
-    .category {
-        background-color: pink;
-
+    &.wrapper {
+        margin: 20px 0;
     }
 }
 
